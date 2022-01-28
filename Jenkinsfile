@@ -43,12 +43,14 @@ pipeline {
                     }
                 }
                 stage("SonarQube") {
-                    sh """
-                    mvn sonar:sonar \
-                        -Dsonar.projectKey=proyectoMaven \
-                        -Dsonar.host.url=http://172.31.3.224:8081 \
-                        -Dsonar.login=3c988e48dcbd46358998e423a8fc98bc15833839
-                    """
+                    steps {
+                        sh """
+                        mvn sonar:sonar \
+                            -Dsonar.projectKey=proyectoMaven \
+                            -Dsonar.host.url=http://172.31.3.224:8081 \
+                            -Dsonar.login=3c988e48dcbd46358998e423a8fc98bc15833839
+                        """
+                    }    
                 }
             }
         }
