@@ -13,8 +13,8 @@ pipeline{
             steps{
                 sh "mvn compile"
                 sh "mvn test-compile"
-                sh "test"
-                sh "package"
+                sh "mvn test"
+                sh "mvn package"
             }
         }
         
