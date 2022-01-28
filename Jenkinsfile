@@ -19,7 +19,9 @@ pipeline{
         }
         
         stage("sonarQube") {
-            sh "TODO pruebas sonarQube"
+            steps{
+                sh "TODO pruebas sonarQube"
+            }
         }
         
         
